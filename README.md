@@ -46,7 +46,7 @@ Ensure the following style files are created in GeoServer and the sld contents p
 -	Air_temperature_degC – style file for air temperature maps (refer to Air_temperature_degC.sld).
 -	Rainfall_mm – style file for rainfall maps (refer to Rainfall_mm).
 
-FURTHER INFORATION
+FURTHER INFORMATION
 For further information about this application please email:
 mweb7041@uni.sydney.edu.au
 Mathew Webb (PhD student, University of Sydney)

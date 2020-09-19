@@ -23,12 +23,14 @@ Rcode – Possesses the source code to run the application including:
 -	‘RealTime_MappingCode_00minutes.R’ - A nationwide air temperature and rainfall map is produced based from 'near real-time' BoM AWS data relevant for observations at 00 minutes (past the hour of interest). It is recommended this script be run at 20 minutes past the hour of interest (e.g. 12.20am AEST). Note that the script requires configuration under the ‘INPUT PARAMETERS’ (these are explained in the script itself). Also note that if GeoServer and Shiny are not installed the script can still be executed to produce maps – they will just not be deployed on GeoServer or Shiny. To do this, ensure to enter ‘GEOSERVER<- "n"’ in the script setting for this feature. 
 -	‘RealTime_MappingCode_00minutes.R’ - A nationwide air temperature and rainfall map is produced based from 'near real-time' BoM AWS data relevant for observations at 30 minutes (past the hour of interest). It is recommended this script be run at 50 minutes past the hour of interest (e.g. 12.50am AEST). Note that the script requires configuration under the ‘INPUT PARAMETERS’ (these are explained in the script itself). Also note that if GeoServer and Shiny are not installed the script can still be executed to produce maps – they will just not be deployed on GeoServer or Shiny. To do this, ensure to enter ‘GEOSERVER<- "n"’ in the script setting for this feature.
 -	‘DeployWebMaps.R’- A nationwide temperature and rainfall map is deployed to the shiny web app based on surfaces produced from the Real time mapping code (‘RealTime_MappingCode_00minutes.R’ or ‘RealTime_MappingCode_00minutes.R’). Note that the script requires configuration under the ‘INPUT PARAMETERS’ (these are explained in the script itself). GeoServer and Shiny server must be installed and operating for this feature to work.
+
 Mapping_system_DATAMODEL – The data model for the above Rcode where outputs will be written and referred to. 
 -	This folder structure ought to be placed in a high-level root directory, e.g. " C:/Mapping_system_DATAMODEL". Be sure to adjust the ‘INPUT PARAMETERS’ in ‘RealTime_MappingCode_00minutes.R’ and ‘RealTime_MappingCode_00minutes.R’ to define the ROOT_DIR parameter, accordingly. 
 -	Also note that the data model requires the 9 second DEM to be placed in the DATA MODEL in the following location: Mapping_system_DATAMODEL/INTERMEDIATE_CovariateData/TAS
 This DEM can be downloaded from:
 https://data.gov.au/data/dataset/ebcf6ca2-513a-4ec7-9323-73508c5d7b93  
 NB: It is vitally important (!) that this DEM is reprojected to ‘GDA94_Geoscience_Australia_Lambert’ and saved as a SAGA grid file (.sdat) and placed in the directory as defined above.
+
 GeoserverStyleFiles – Style files to be added into Geoserver to render incoming air temperature and rainfall maps for display in the shiny application. Style files include:
 -	Air_temperature_degC.sld – style file for air temperature maps.
 -	Rainfall_mm.sld – style file for rainfall maps.
@@ -38,6 +40,7 @@ GEOSERVER CONFIGURATION
 Ensure the following workspaces are created in GeoServer: 
 -	TempPred
 -	RainPred
+
 Ensure the following style files are created in GeoServer and the sld contents pasted into style content accordingly (as mentioned previously):
 -	Air_temperature_degC – style file for air temperature maps (refer to Air_temperature_degC.sld).
 -	Rainfall_mm – style file for rainfall maps (refer to Rainfall_mm).

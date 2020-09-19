@@ -10,7 +10,7 @@ This mapping application displays spatially interpolated air temperature and acc
 -	Map query functionality to provide site specific information for any location in Australia (simply click on a location within the map extent to derive site specific information for the previous 3 hours for temperature and rainfall);
 Please note that this map application is a PhD experiment and continually evolving. A journal article detailing the major findings of this study is currently in production.
 
-SPECIFICAITONS
+SPECIFICATIONS
 The source code presented in this repository requires:
 -	High-end CPU specifications, preferably with at least 12VCPU’s and plenty of RAM. 
 -	Software R (ver 3.6.1 or higher, visit https://www.r-project.org/) installed and operating. In addition, the following R packages will also need to be installed and operating: httr, RNetCDF, ncdf4, epiR, plyr, gstat, sp, automap, rgdal, raster, MASS, doParallel, foreach, snow, Cubist, fields, leaflet, htmwidgets, leaflet.extras, shiny.
